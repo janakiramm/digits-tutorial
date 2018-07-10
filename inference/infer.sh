@@ -1,0 +1,1 @@
+docker run -it --rm --name caffe -v $PWD:/infer bvlc/caffe:cpu  bash -c "cd /infer && python -W ignore classify.py -m mean.binaryproto -l labels.txt $MODEL_NAME deploy.prototxt $1 --nogpu"
